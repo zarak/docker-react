@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t zarak/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run zarak/docker-react npm run test -- --coverage
